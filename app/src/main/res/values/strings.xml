@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">FunLoot</string>
+    <string name="todo">TODO</string>
+    <string name="years">Возраст</string>
+    <string name="sports">Вид спорта</string>
+    <string name="server_url">https://funloot.herokuapp.com/</string>
+    <string name="local_url">http://10.0.2.2:3000/</string>
+
+    <string-array name="women_years">
+        <item>3-18</item>
+        <item>19-29</item>
+        <item>30-54</item>
+        <item>55-79</item>
+        <item>80+</item>
+    </string-array>
+
+    <string-array name="men_years">
+        <item>3-18</item>
+        <item>19-29</item>
+        <item>30-59</item>
+        <item>60-79</item>
+        <item>80+</item>
+    </string-array>
+
+    <string-array name="roles">
+        <item>Активный гражданин</item>
+        <item>спортсмен</item>
+        <item>судья</item>
+        <item>тренер</item>
+    </string-array>
+
+    <string-array name="funloot_regions">
+        <item>Республика Саха (Якутия)</item>
+    </string-array>
+
+    <string-array name="sports">
+        <item>Автомобильный и мотоциклетный спорт</item>
+        <item>Акробатический рок-н-ролл</item>
+        <item>Американский футбол</item>
+        <item>Баскетбол</item>
+        <item>Биатлон</item>
+        <item>Бильярд</item>
+        <item>Бодибилдинг</item>
+        <item>Бокс</item>
+        <item>Волейбол</item>
+        <item>Вольная борьба</item>
+        <item>Гиревой спорт</item>
+        <item>Го</item>
+        <item>Дартс</item>
+        <item>Дзюдо</item>
+        <item>Кикбоксинг</item>
+        <item>Киокусинкай</item>
+        <item>Конный спорт</item>
+        <item>Легкая атлетика</item>
+        <item>Лыжные гонки</item>
+        <item>Мас - рестлинг</item>
+        <item>Настольный теннис</item>
+        <item>Парашютный спорт</item>
+        <item>Парусный спорт </item>
+        <item>Пауэрлифтинг</item>
+        <item>Плавание</item>
+        <item>Практическая стрельба</item>
+        <item>Пэйнтбол</item>
+        <item>Самбо</item>
+        <item>Смешанное боевое единоборство (ММА)</item>
+        <item>Спорт сверхлегкой авиации</item>
+        <item>Спорт слепых</item>
+        <item>Спортивный туризм</item>
+        <item>Стрельба из лука</item>
+        <item>Тхэквондо</item>
+        <item>Тяжелая атлетика</item>
+        <item>Ушу</item>
+        <item>Фигурное катание</item>
+        <item>Фитнес - аэробика</item>
+        <item>Футбол</item>
+        <item>Хапсагай</item>
+        <item>Хоккей</item>
+        <item>Художественная гимнастика</item>
+        <item>Черлидинг</item>
+        <item>Шахматы</item>
+        <item>Шашки</item>
+        <item>Танцевальный спорт</item>
+        <item>Керлинг</item>
+        <item>Чир спорта</item>
+        <item>Скалолазание</item>
+        <item>Альпинизм</item>
+        <item>Джиу – Джитсу</item>
+        <item>Спорт лиц с ПОДА</item>
+        <item>Компьютерный спорт</item>
+        <item>Спорт глухих</item>
+        <item>Айкидо</item>
+        <item>Армрестлинг</item>
+        <item>Велосипедный спорт</item>
+        <item>Настольные игры</item>
+        <item>Пожарно-прикладной спорт</item>
+        <item>Пулевая стрельба</item>
+        <item>Стендовая стрельба</item>
+        <item>Ракетомодельный спорт</item>
+        <item>Северное многоборье</item>
+        <item>Сноуборд</item>
+        <item>Спортивная аэробика</item>
+        <item>Спортивное ориентирование</item>
+        <item>Спортинг</item>
+        <item>Спортивная гимнастика</item>
+        <item>Тайский бокс</item>
+        <item>Якутские прыжки</item>
+        <item>Боулинг</item>
+        <item>Кинологический спорт</item>
+        <item>Спортивно-прикладное собаководства</item>
+        <item>Регби</item>
+        <item>Авиамодельный спорт</item>
+        <item>Шорт – трек</item>
+    </string-array>
+    <string name="title_activity_new_main">NewMainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>

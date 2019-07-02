@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.esphereal.bair.funloot.LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo_image_login"
+        android:layout_width="216dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="54dp"
+        android:src="@drawable/login_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/content_login"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_image_login">
+
+
+        <RelativeLayout
+            android:id="@+id/edit_layout_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/action_buttons_layout_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.github.pinball83.maskededittext.MaskedEditText
+                android:id="@+id/phone_edit_login"
+                android:layout_width="183dp"
+
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:hint="Введите номер телефона"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+
+                app:mask="+7 (***) ***-**-**"
+                app:notMaskedSymbol="*" />
+
+            <EditText
+                android:id="@+id/code_edit_login"
+                android:layout_width="183dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:hint="Введите код"
+                android:imeOptions="actionNone"
+                android:inputType="numberSigned"
+                android:maxLength="6" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/action_buttons_layout_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="57dp"
+            app:layout_constraintBottom_toTopOf="@+id/social_text_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/start_verify_button_login"
+                android:layout_width="203dp"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_rounded_corner"
+                android:elevation="14dp"
+                android:shadowColor="#f9e3b9"
+                android:text="Отправить код"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:translationZ="14dp"
+
+                />
+
+            <Button
+                android:id="@+id/resend_verify_button"
+                android:layout_width="203dp"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_rounded_corner"
+                android:elevation="14dp"
+                android:shadowColor="#f9e3b9"
+                android:text="Переотправить"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:translationZ="14dp"
+
+                />
+
+            <Button
+                android:id="@+id/code_verify_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="confirm code"
+                android:visibility="gone"
+
+                />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/social_text_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="19dp"
+            android:text="Войти с помощью"
+            android:textColor="#8B8B8B"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/social_buttons_layout_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+
+            android:id="@+id/social_buttons_layout_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="101.8dp"
+
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <Button
+
+                android:id="@+id/google_button_login"
+                android:layout_width="31.24dp"
+                android:layout_height="31.2dp"
+                android:background="@drawable/google_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

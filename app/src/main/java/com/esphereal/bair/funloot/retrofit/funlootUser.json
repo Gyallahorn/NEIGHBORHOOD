@@ -1,0 +1,40 @@
+{
+  "type":"object",
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "uid": {
+      "type": "string"
+    },
+    "photoURL": {
+      "type": "string"
+    },
+    "fullName": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "age": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "userType": {
+      "type": "string"
+    },
+    "sportType": {
+      "type": "string"
+    }
+
+
+  }
+}
