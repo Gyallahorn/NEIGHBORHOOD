@@ -1,6 +1,7 @@
 package com.esphereal.bair.funloot.retrofit
 
 import com.esphereal.bair.funloot.dummyAdding.IventNews
+import com.esphereal.bair.funloot.dummyAdding.IventProblems
 import com.esphereal.bair.funloot.dummyAdding.ScoreBody
 import retrofit2.Call
 import retrofit2.http.Body
@@ -39,5 +40,10 @@ interface  FunlootApi {
 
     @POST( "/api/score")
     fun postScore (@Header("idToken") idToken: String,@Body body: ScoreBody ): Observable<ScoreBody>
+
+    //This take data from backend, without idToken
+    //
+    @GET("/api/problems")
+    fun getProblems():Observable<List<IventProblems>>
 
 }

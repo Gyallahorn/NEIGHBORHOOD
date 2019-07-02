@@ -25,6 +25,9 @@
             android:id="@+id/nav_about_app"
             android:title="О приложении" />
         <item
+            android:id="@+id/nav_problems"
+            android:title="Проблемы"/>
+        <item
             android:id="@+id/nav_logout"
             android:title="Выйти" />
     </group>
