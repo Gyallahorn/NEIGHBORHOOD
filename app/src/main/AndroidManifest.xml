@@ -35,6 +35,22 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
+        //NIBBA
+        <activity android:name=".NEIGHBORHOOD.NibbaNewsActivity"/>
+        <activity android:name=".NEIGHBORHOOD.NMainActivity">
+        </activity>
+        <activity android:name=".NEIGHBORHOOD.NibbaAboutActivity"></activity>
+        <activity android:name=".NEIGHBORHOOD.NibbaSplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        //FUNLOOT
         <activity android:name=".dummyAdding.AddingActivity"/>
         <activity android:name=".dummyAdding.IventNewsActivity"/>
 
@@ -49,11 +65,7 @@
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".NewsDetails" />
 

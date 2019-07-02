@@ -66,7 +66,7 @@ public class DiscountFragment extends Fragment {
         } else {
             recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
         }
-        recyclerView.setAdapter(new MyDiscountItemRecyclerViewAdapter(DiscountDummyContent.ITEMS, mListener));
+        recyclerView.setAdapter(new MyDiscountItemRecyclerViewAdapter(DiscountDummyContent.INSTANCE.getITEMS(), mListener));
 
         return view;
     }
