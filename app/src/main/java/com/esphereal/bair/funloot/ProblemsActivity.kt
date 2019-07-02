@@ -18,7 +18,7 @@ class ProblemsActivity : AppCompatActivity() {
         RetrofitSingleton.getInstance().GetApi().getProblems().observeOn(AndroidSchedulers.mainThread())
                 .subscribe { result ->
                     //This replace TextView to mongoDB field
-                    textProblem.text = result[2].problems_body
+                    textProblem.text = result[0].problems_body
 
                 }
         //val textView: TextView = findViewById(R.id.textProblem) as TextView
