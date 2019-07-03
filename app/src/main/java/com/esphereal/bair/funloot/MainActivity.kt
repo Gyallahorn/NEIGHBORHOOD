@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity(), TrackerFragment.OnFragmentInteractionL
                 startActivity(intent)
             }
             R.id.nav_problems-> {
-                val intent = Intent(this@MainActivity, ProblemsActivity::class.java)
+                val intent = Intent(this@MainActivity, ProblemListJava::class.java)
                 startActivity(intent)
             }
 
