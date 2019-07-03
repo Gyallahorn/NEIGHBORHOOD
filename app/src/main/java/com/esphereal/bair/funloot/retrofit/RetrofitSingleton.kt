@@ -26,7 +26,7 @@ class RetrofitSingleton private constructor() {
         val rxAdapter = RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io())
         mRetrofit = Retrofit.Builder()
             //.baseUrl("https://funloot.herokuapp.com/")
-                .baseUrl("http://192.168.1.58:3000/")
+                .baseUrl("http://10.0.108.104:3000/") //My local IP
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(rxAdapter)
                 .client(client.build())

@@ -72,6 +72,11 @@ class MainActivity : AppCompatActivity(), TrackerFragment.OnFragmentInteractionL
                 val intent = Intent(this@MainActivity, AddingActivity::class.java)
                 startActivity(intent)
             }
+            R.id.nav_problems-> {
+                val intent = Intent(this@MainActivity, ProblemsActivity::class.java)
+                startActivity(intent)
+            }
+
         }
 
         val drawer = findViewById(R.id.drawer_layout_main) as DrawerLayout
