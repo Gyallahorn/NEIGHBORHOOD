@@ -1,3 +1,4 @@
+/*
 package com.esphereal.bair.neighborhood.retrofit;
 import com.esphereal.bair.funloot.LoginActivity;
 
@@ -14,3 +15,4 @@ public class FunlootCallBack {
         callback.callinBack();
     }
 }
+*/

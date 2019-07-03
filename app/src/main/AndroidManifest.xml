@@ -35,42 +35,19 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
-        //NIBBA
+
         <activity android:name="com.esphereal.bair.neighborhood.NEIGHBORHOOD.NibbaMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity android:name="com.esphereal.bair.neighborhood.NEIGHBORHOOD.NibbaAboutActivity"></activity>
-        <activity android:name="com.esphereal.bair.neighborhood.NEIGHBORHOOD.NibbaNewsActivity"></activity>
-
-        //FUNLOOT
-        <activity android:name="com.esphereal.bair.neighborhood.dummyAdding.AddingActivity"></activity>
-        <activity android:name="com.esphereal.bair.neighborhood.dummyAdding.IventNewsActivity"></activity>
-        <activity android:name="com.esphereal.bair.neighborhood.ConfidentialPolicyActivity" />
-        <activity android:name="com.esphereal.bair.neighborhood.AboutAppActivity" />
-        <activity android:name="com.esphereal.bair.neighborhood.LicenseActivity" />
-        <activity android:name="com.esphereal.bair.neighborhood.profile.ProfileActivity" />
-        <activity android:name="com.esphereal.bair.neighborhood.LoginActivity" />
-        <activity android:name="com.esphereal.bair.neighborhood.SplashActivity">
-            android:theme="@style/SplashTheme"
-        </activity>
+        <activity android:name="com.esphereal.bair.neighborhood.NEIGHBORHOOD.NibbaNewsFragment"></activity>
+        <activity android:name="com.esphereal.bair.neighborhood.NEIGHBORHOOD.NibbaProblemsPostActivity"></activity>
 
 
-        <activity android:name="com.esphereal.bair.neighborhood.NewsDetails" />
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-        <activity
-            android:name="com.esphereal.bair.neighborhood.MainActivity"
-            android:exported="true" />
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
     </application>
 
 </manifest>

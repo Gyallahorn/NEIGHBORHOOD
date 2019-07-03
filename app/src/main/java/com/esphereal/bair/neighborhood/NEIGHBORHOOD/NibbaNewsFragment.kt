@@ -26,7 +26,7 @@ import kotlinx.android.synthetic.main.news_item.view.*
 import kotlinx.android.synthetic.main.nibba_news.*
 import org.jetbrains.anko.toast
 
-class NibbaNewsActivity : Fragment(), View.OnClickListener {
+class NibbaNewsFragment : Fragment(), View.OnClickListener {
 
     public val rating = 500
     override fun onClick(v: View?) {

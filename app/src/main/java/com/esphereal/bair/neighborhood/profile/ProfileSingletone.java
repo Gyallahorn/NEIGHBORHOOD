@@ -1,3 +1,4 @@
+/*
 package com.esphereal.bair.neighborhood.profile;
 
 import android.util.Log;
@@ -68,3 +69,4 @@ public class ProfileSingletone {
 
 
 }
+*/

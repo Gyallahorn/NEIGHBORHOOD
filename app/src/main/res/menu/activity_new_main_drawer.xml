@@ -4,14 +4,14 @@
 
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="all">
         <item
             android:id="@+id/nav_news"
             android:title="Новости" />
 
         <item
             android:id="@+id/nav_ivent"
-            android:title="Амгинские Игры"/>
+            android:title="Амгинские Игры" />
         <item
             android:id="@+id/nav_track"
             android:title="Трекер" />
@@ -26,7 +26,7 @@
             android:title="О приложении" />
         <item
             android:id="@+id/nav_problems"
-            android:title="Проблемы"/>
+            android:title="Проблемы" />
         <item
             android:id="@+id/nav_logout"
             android:title="Выйти" />

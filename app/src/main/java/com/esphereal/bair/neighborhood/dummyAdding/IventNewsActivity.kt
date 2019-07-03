@@ -1,3 +1,4 @@
+/*
 package com.esphereal.bair.neighborhood.dummyAdding
 
 import android.content.Context
@@ -25,13 +26,15 @@ class IventNewsActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+*/
 /*
     val mNewsList: ArrayList<String> = ArrayList()
     private var mIvent_news_title: TextView? = null
     private var mIvent_news_body: TextView? = null
     private var news_title: IventNews? = null
     private var news_body: IventNews? = null
-*/
+*//*
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +46,7 @@ class IventNewsActivity : AppCompatActivity(), View.OnClickListener {
         recyclerView.adapter = MyRecycleViewIventAdapter(IventData.ITEMS)
 
         GettingIventNewsSingletone.getInstance().Get_title(context = this)
+*/
 /*
         mIvent_news_title = findViewById(R.id.ivent_news_title)
         mIvent_news_body = findViewById(R.id.ivent_news_body)
@@ -50,7 +54,8 @@ class IventNewsActivity : AppCompatActivity(), View.OnClickListener {
         // mNewsList.вadd(news_body.toString())
         mNewsList.add("bla bla")
         mNewsList.add("ololol")
-*/
+*//*
+
     }
 
     class MyRecycleViewIventAdapter(private val mValues: List<IventData.IventDataItem>) : RecyclerView.Adapter<MyRecycleViewIventAdapter.ViewHolder>() {
@@ -83,3 +88,4 @@ class IventNewsActivity : AppCompatActivity(), View.OnClickListener {
 
 
 
+*/

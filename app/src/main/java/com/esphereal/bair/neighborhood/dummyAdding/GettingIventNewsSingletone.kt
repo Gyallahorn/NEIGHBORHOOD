@@ -1,3 +1,4 @@
+/*
 package com.esphereal.bair.neighborhood.dummyAdding
 
 import android.annotation.SuppressLint
@@ -63,3 +64,4 @@ class GettingIventNewsSingletone {
 
 
 }
+*/

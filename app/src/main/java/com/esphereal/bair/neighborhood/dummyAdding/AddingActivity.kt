@@ -1,3 +1,4 @@
+/*
 package com.esphereal.bair.neighborhood.dummyAdding
 
 import android.content.Intent
@@ -56,3 +57,4 @@ ivent_button.setOnClickListener(object: View.OnClickListener{
 }
 
 
+*/

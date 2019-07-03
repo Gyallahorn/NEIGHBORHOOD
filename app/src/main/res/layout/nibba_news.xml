@@ -8,12 +8,24 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/nibba_news"
-        android:layout_width="343dp"
-        android:layout_height="323dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:scrollbars="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/nibba_item" />
+        tools:listitem="@layout/nibba_item"
+        android:layout_marginBottom="60dp"/>
+
+    <!--<Button
+        android:id="@+id/nibba_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="40dp"
+        android:text="Добавить Проблему"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />-->
 </android.support.constraint.ConstraintLayout>

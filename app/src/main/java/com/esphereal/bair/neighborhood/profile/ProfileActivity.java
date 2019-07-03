@@ -1,3 +1,4 @@
+/*
 package com.esphereal.bair.neighborhood.profile;
 
 import android.support.constraint.ConstraintLayout;
@@ -149,3 +150,4 @@ public class ProfileActivity extends AppCompatActivity {
         mProfileContent.setVisibility(View.VISIBLE);
     }
 }
+*/
