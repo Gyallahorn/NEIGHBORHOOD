@@ -14,10 +14,10 @@ object NibbaList {
     }
 
     init {
-        val nibbaListItem1 = NibbaListItem("Продам гараж", "Продам Гараж за 100р", drawable.logo)
-        val nibbaListItem2 = NibbaListItem("Продам гараж", "Продам Гараж за 100р", drawable.logo)
-        val nibbaListItem3 = NibbaListItem("Продам гараж", "Продам Гараж за 100р", drawable.logo)
-        val nibbaListItem4 = NibbaListItem("Продам гараж", "Продам Гараж за 100р", drawable.logo)
+        val nibbaListItem1 = NibbaListItem("Продам гараж", "Продам Гараж за 100р", drawable.blin)
+        val nibbaListItem2 = NibbaListItem("Продам гараж", "Продам Гараж за 100р", drawable.back)
+        val nibbaListItem3 = NibbaListItem("Продам гараж", "Продам Гараж за 100р", drawable.blin)
+        val nibbaListItem4 = NibbaListItem("Продам гараж", "Продам Гараж за 100р", drawable.back)
         ITEMS.add(nibbaListItem1)
         ITEMS.add(nibbaListItem2)
         ITEMS.add(nibbaListItem3)

@@ -22,7 +22,7 @@ class NibbaSplashActivity : AppCompatActivity(){
         internal val mRunnable: Runnable = Runnable {
             if (!isFinishing) {
 
-                val intent = Intent(applicationContext, NMainActivity::class.java)
+                val intent = Intent(applicationContext, NibbaMainActivity::class.java)
                 startActivity(intent)
                 finish()
             }

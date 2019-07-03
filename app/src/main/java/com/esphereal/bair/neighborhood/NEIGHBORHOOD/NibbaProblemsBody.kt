@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot.dummyAdding
+package com.esphereal.bair.neighborhood.dummyAdding
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

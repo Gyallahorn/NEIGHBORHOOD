@@ -18,6 +18,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import com.esphereal.bair.funloot.NEIGHBORHOOD.NibbaProblemsActivity
 import com.esphereal.bair.funloot.jsoup.JsoupSingleton
 import com.esphereal.bair.funloot.profile.ProfileActivity
 import com.esphereal.bair.funloot.profile.ProfileCallBack
@@ -73,7 +74,7 @@ class MainActivity : AppCompatActivity(), TrackerFragment.OnFragmentInteractionL
                 startActivity(intent)
             }
             R.id.nav_problems-> {
-                val intent = Intent(this@MainActivity, ProblemsActivity::class.java)
+                val intent = Intent(this@MainActivity, NibbaProblemsActivity::class.java)
                 startActivity(intent)
             }
 

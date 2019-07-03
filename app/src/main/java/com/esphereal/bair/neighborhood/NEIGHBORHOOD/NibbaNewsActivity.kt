@@ -2,6 +2,7 @@ package com.esphereal.bair.funloot.NEIGHBORHOOD
 
 import android.media.Image
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -50,9 +51,7 @@ class NibbaNewsActivity : AppCompatActivity(), View.OnClickListener {
             val mTitle: TextView
             val mBody: TextView
             val mImage: ImageView
-            fun bind(mValues: List<NibbaList>) {
 
-            }
 
             init {
                 mTitle = mView.findViewById(R.id.nibba_title) as TextView

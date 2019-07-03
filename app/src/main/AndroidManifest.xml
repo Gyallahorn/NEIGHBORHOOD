@@ -12,8 +12,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
 
     <application
         android:allowBackup="true"
@@ -36,9 +36,8 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         //NIBBA
-        <activity android:name=".NEIGHBORHOOD.NibbaNewsActivity"/>
-        <activity android:name=".NEIGHBORHOOD.NMainActivity">
-        </activity>
+        <activity android:name=".NEIGHBORHOOD.NibbaNewsActivity" />
+        <activity android:name=".NEIGHBORHOOD.NMainActivity"></activity>
         <activity android:name=".NEIGHBORHOOD.NibbaAboutActivity"></activity>
         <activity android:name=".NEIGHBORHOOD.NibbaSplashActivity">
             <intent-filter>
@@ -47,12 +46,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".ProblemsActivity"></activity>
 
 
         //FUNLOOT
-        <activity android:name=".dummyAdding.AddingActivity"/>
-        <activity android:name=".dummyAdding.IventNewsActivity"/>
+        <activity android:name=".dummyAdding.AddingActivity" />
+        <activity android:name=".dummyAdding.IventNewsActivity" />
 
 
         <activity android:name=".ConfidentialPolicyActivity" />
@@ -75,7 +74,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
     </application>
 
 </manifest>

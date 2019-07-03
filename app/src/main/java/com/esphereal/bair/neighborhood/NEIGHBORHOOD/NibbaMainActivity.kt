@@ -7,7 +7,7 @@ import android.view.View
 import com.esphereal.bair.funloot.R
 import kotlinx.android.synthetic.main.nibba_main_activity.*
 
-class NMainActivity : AppCompatActivity(),View.OnClickListener{
+class NibbaMainActivity : AppCompatActivity(),View.OnClickListener{
     override fun onClick(v: View?) {
 
     }
@@ -17,11 +17,19 @@ class NMainActivity : AppCompatActivity(),View.OnClickListener{
         setContentView(R.layout.nibba_main_activity)
         nibba_button.setOnClickListener(object : View.OnClickListener{
             override fun onClick (v:View?){
-                val intent = Intent (this@NMainActivity,NibbaNewsActivity::class.java)
+                val intent = Intent (this@NibbaMainActivity,NibbaNewsActivity::class.java)
                 startActivity(intent)
             }
 
         })
+        nibba_button2.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+                val intent = Intent (this@NibbaMainActivity, NibbaProblemsActivity::class.java)
+                startActivity(intent)  }
+
+
+        })
+
     }
 
 
