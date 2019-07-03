@@ -1,9 +1,11 @@
-package com.esphereal.bair.funloot.profile;
+package com.esphereal.bair.neighborhood.profile;
 
 import android.util.Log;
 
 import com.esphereal.bair.funloot.retrofit.RetrofitSingleton;
-import com.esphereal.bair.funloot.retrofit.FunlootUser;
+import com.esphereal.bair.neighborhood.retrofit.FunlootUser;
+import com.esphereal.bair.neighborhood.retrofit.FunlootUser;
+import com.esphereal.bair.neighborhood.retrofit.RetrofitSingleton;
 
 
 import retrofit2.Call;

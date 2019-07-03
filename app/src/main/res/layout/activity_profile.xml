@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.esphereal.bair.funloot.profile.ProfileActivity">
+    tools:context="com.esphereal.bair.funloot.com.esphereal.bair.neighborhood.profile.ProfileActivity">
 
     <include
         layout="@layout/top_panel_with_back_button"

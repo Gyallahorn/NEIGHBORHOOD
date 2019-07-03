@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot
+package com.esphereal.bair.neighborhood
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 
-import com.esphereal.bair.funloot.profile.ProfileSingletone
+import com.esphereal.bair.neighborhood.profile.ProfileSingletone
 import com.esphereal.bair.funloot.util.PrefUtil
 import com.google.firebase.auth.FirebaseAuth
 
@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
                     if (result.isSuccessful) {
                         PrefUtil.setIdToken(result.result!!.token!!, this@SplashActivity as Context)
                         val intent = Intent(this@SplashActivity, MainActivity::class.java)
-                        ProfileSingletone.getInstance().GetUser(null)
+                        com.esphereal.bair.neighborhood.profile.ProfileSingletone.getInstance().GetUser(null)
                         startActivity(intent)
                         finish()
 
@@ -59,7 +59,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun redirectToLogin() {
-        val intent = Intent(this@SplashActivity, LoginActivity::class.java)
+        val intent = Intent(this@SplashActivity, com.esphereal.bair.neighborhood.LoginActivity::class.java)
         startActivity(intent)
         finish()
     }

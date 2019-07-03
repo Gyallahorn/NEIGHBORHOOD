@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot;
+package com.esphereal.bair.neighborhood;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.esphereal.bair.funloot.R;
 import com.esphereal.bair.funloot.dummy.DiscountDummyContent;
+import com.esphereal.bair.neighborhood.dummy.DiscountDummyContent;
 
 /**
  * A fragment representing a list of Items.

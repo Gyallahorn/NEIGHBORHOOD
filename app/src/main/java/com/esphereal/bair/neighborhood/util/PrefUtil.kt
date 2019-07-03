@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot.util
+package com.esphereal.bair.neighborhood.util
 
 import android.content.Context
 import android.preference.PreferenceManager

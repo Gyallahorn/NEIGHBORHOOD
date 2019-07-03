@@ -1,6 +1,6 @@
-package com.esphereal.bair.funloot.retrofit
+package com.esphereal.bair.neighborhood.retrofit
 
-import com.esphereal.bair.funloot.dummyAdding.IventNews
+import com.esphereal.bair.neighborhood.dummyAdding.IventNews
 import com.google.firebase.auth.FirebaseAuth
 
 import okhttp3.OkHttpClient
@@ -33,28 +33,13 @@ class RetrofitSingleton private constructor() {
                 .build()
     }
 
-    private fun getIdToken(idTokenCallBack: IdTokenCallBack) {
+    private fun getIdToken(idTokenCallBack: com.esphereal.bair.neighborhood.retrofit.IdTokenCallBack) {
         FirebaseAuth.getInstance().currentUser!!.getIdToken(false).addOnSuccessListener { getTokenResult -> idTokenCallBack.onIdTokenBack(getTokenResult.token) }
     }
 
-    fun GetUser(callback: Callback<FunlootUser>) {
-        val idTokenCallBack = IdTokenCallBack { idToken -> mRetrofit.create(FunlootApi::class.java).getUser(idToken).enqueue(callback) }
-        getIdToken(idTokenCallBack)
 
 
-    }
 
-    fun GetLogin(callback: Callback<Void>, idToken: String) {
-        mRetrofit.create(FunlootApi::class.java).getLogin(idToken).enqueue(callback)
-
-    }
-
-    fun PostUser(callback: Callback<FunlootUser>, user: FunlootUser) {
-        val idTokenCallBack = IdTokenCallBack { idToken -> mRetrofit.create(FunlootApi::class.java).postUser(idToken, user).enqueue(callback) }
-        getIdToken(idTokenCallBack)
-
-
-    }
 
     fun GetApi(): FunlootApi {
 

@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot.dummy;
+package com.esphereal.bair.neighborhood.dummy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,10 +1,12 @@
-package com.esphereal.bair.funloot;
+package com.esphereal.bair.neighborhood;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.esphereal.bair.funloot.R;
 
 public class AboutAppActivity extends AppCompatActivity {
 

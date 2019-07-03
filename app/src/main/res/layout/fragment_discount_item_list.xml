@@ -10,7 +10,7 @@
         android:id="@+id/discount_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".DiscountFragment"
+        tools:context="com.esphereal.bair.neighborhood.DiscountFragment"
         tools:listitem="@layout/fragment_discount_item">
 
     </android.support.v7.widget.RecyclerView>

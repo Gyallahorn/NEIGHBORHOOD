@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot
+package com.esphereal.bair.neighborhood
 
 import android.content.Context
 import android.os.Handler
@@ -18,9 +18,9 @@ import android.widget.LinearLayout
 import android.widget.Switch
 import android.widget.TextView
 
-import com.esphereal.bair.funloot.DiscountFragment.OnListFragmentInteractionListener
+import com.esphereal.bair.neighborhood.DiscountFragment.OnListFragmentInteractionListener
 import com.esphereal.bair.funloot.dummy.DiscountDummyContent
-import com.esphereal.bair.funloot.dummy.DummyContent.DummyItem
+import com.esphereal.bair.neighborhood.dummy.DummyContent.DummyItem
 import java.util.logging.StreamHandler
 
 import android.view.View.VISIBLE

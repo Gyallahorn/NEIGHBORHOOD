@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot.dummyAdding
+package com.esphereal.bair.neighborhood.dummyAdding
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,6 +11,7 @@ import org.jetbrains.anko.toast
 import com.esphereal.bair.funloot.R
 import com.esphereal.bair.funloot.retrofit.RetrofitSingleton
 import com.esphereal.bair.funloot.util.PrefUtil
+import com.esphereal.bair.neighborhood.NEIGHBORHOOD.NibbaPostBody
 import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.adding_dummy.*
 
@@ -24,7 +25,7 @@ class AddingActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.adding_dummy)
 
-        val scoreBody = ScoreBody()
+        val scoreBody = NibbaPostBody()
 
 
 ivent_button.setOnClickListener(object: View.OnClickListener{

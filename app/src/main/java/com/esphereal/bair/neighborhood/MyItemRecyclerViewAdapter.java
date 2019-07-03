@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot;
+package com.esphereal.bair.neighborhood;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,15 +12,18 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.esphereal.bair.funloot.jsoup.JsoupSingleton;
-import com.esphereal.bair.funloot.NewsListFragment.OnListFragmentInteractionListener;
-import com.esphereal.bair.funloot.dummy.DummyContent.DummyItem;
+import com.esphereal.bair.funloot.R;
+import com.esphereal.bair.neighborhood.jsoup.JsoupSingleton;
+import com.esphereal.bair.neighborhood.NewsListFragment.OnListFragmentInteractionListener;
+import com.esphereal.bair.neighborhood.dummy.DummyContent.DummyItem;
+import com.esphereal.bair.neighborhood.dummy.DummyContent;
+import com.esphereal.bair.neighborhood.jsoup.JsoupSingleton;
 
 import java.io.InputStream;
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
+ * {@link RecyclerView.Adapter} that can display a {@link DummyContent.DummyItem} and makes a call to the
  * specified {@link OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */

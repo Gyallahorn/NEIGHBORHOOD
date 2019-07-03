@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot
+package com.esphereal.bair.neighborhood
 
 import android.location.Location
 import android.net.Uri
@@ -19,11 +19,11 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import com.esphereal.bair.funloot.NEIGHBORHOOD.NibbaProblemsActivity
-import com.esphereal.bair.funloot.jsoup.JsoupSingleton
-import com.esphereal.bair.funloot.profile.ProfileActivity
-import com.esphereal.bair.funloot.profile.ProfileCallBack
-import com.esphereal.bair.funloot.profile.ProfileSingletone
-import com.esphereal.bair.funloot.retrofit.FunlootUser
+import com.esphereal.bair.neighborhood.jsoup.JsoupSingleton
+import com.esphereal.bair.neighborhood.profile.ProfileActivity
+import com.esphereal.bair.neighborhood.profile.ProfileCallBack
+import com.esphereal.bair.neighborhood.profile.ProfileSingletone
+import com.esphereal.bair.neighborhood.retrofit.FunlootUser
 import com.esphereal.bair.funloot.dummy.DiscountDummyContent
 import com.esphereal.bair.funloot.dummyAdding.AddingActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -32,7 +32,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 
 
-class MainActivity : AppCompatActivity(), TrackerFragment.OnFragmentInteractionListener, DiscountFragment.OnListFragmentInteractionListener, NewsListFragment.OnListFragmentInteractionListener, NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), TrackerFragment.OnFragmentInteractionListener, com.esphereal.bair.neighborhood.DiscountFragment.OnListFragmentInteractionListener, com.esphereal.bair.neighborhood.NewsListFragment.OnListFragmentInteractionListener, NavigationView.OnNavigationItemSelectedListener {
     override fun onFragmentInteraction(uri: Uri) {
 
     }
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity(), TrackerFragment.OnFragmentInteractionL
                 viewPager.currentItem = 1
             }
             R.id.nav_profile -> {
-                val intent = Intent(this@MainActivity, ProfileActivity::class.java)
+                val intent = Intent(this@MainActivity, com.esphereal.bair.neighborhood.profile.ProfileActivity::class.java)
                 startActivity(intent)
             }
             R.id.nav_logout -> {
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity(), TrackerFragment.OnFragmentInteractionL
                 viewPager.currentItem = 2
             }
             R.id.nav_about_app -> {
-                val intent = Intent(this@MainActivity, AboutAppActivity::class.java)
+                val intent = Intent(this@MainActivity, com.esphereal.bair.neighborhood.AboutAppActivity::class.java)
                 startActivity(intent)
             }
             R.id.nav_ivent -> {
@@ -98,14 +98,14 @@ class MainActivity : AppCompatActivity(), TrackerFragment.OnFragmentInteractionL
         // Google sign out
         googleSignInClient.signOut().addOnCompleteListener(this
         ) {
-            val intent = Intent(this@MainActivity, LoginActivity::class.java)
+            val intent = Intent(this@MainActivity, com.esphereal.bair.neighborhood.LoginActivity::class.java)
             startActivity(intent)
             finish()
         }
 
     }
 
-    override fun onListFragmentInteraction(item: JsoupSingleton.NewsItem, loader: ProgressBar) {
+    override fun onListFragmentInteraction(item: com.esphereal.bair.neighborhood.jsoup.JsoupSingleton.NewsItem, loader: ProgressBar) {
 
         Log.d("DEBUG", "onclick")
         //loader.setVisibility(View.VISIBLE)
@@ -140,7 +140,7 @@ class MainActivity : AppCompatActivity(), TrackerFragment.OnFragmentInteractionL
         tabLayout.addTab(tabLayout.newTab().setText("Мой профиль"));*/
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
         var viewPager: ViewPager = findViewById(R.id.pager) as ViewPager
-        val adapter = MainActivityPagerAdapter(supportFragmentManager, tabLayout.tabCount)
+        val adapter = com.esphereal.bair.neighborhood.MainActivityPagerAdapter(supportFragmentManager, tabLayout.tabCount)
         viewPager.adapter = adapter
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
 
@@ -182,8 +182,8 @@ class MainActivity : AppCompatActivity(), TrackerFragment.OnFragmentInteractionL
         val headerLayout = navigationView.getHeaderView(0)
 
         val userTextView = headerLayout.findViewById<TextView>(R.id.user_name_nav_header)
-        ProfileSingletone.getInstance().GetUser(object : ProfileCallBack {
-            override fun onBackData(user: FunlootUser?) {
+        com.esphereal.bair.neighborhood.profile.ProfileSingletone.getInstance().GetUser(object : com.esphereal.bair.neighborhood.profile.ProfileCallBack {
+            override fun onBackData(user: com.esphereal.bair.neighborhood.retrofit.FunlootUser?) {
 
                 if (user != null)
                     userTextView.setText(user.displayName)

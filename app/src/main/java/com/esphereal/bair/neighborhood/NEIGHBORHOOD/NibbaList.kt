@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot.NEIGHBORHOOD
+package com.esphereal.bair.neighborhood.NEIGHBORHOOD
 
 import android.media.Image
 import com.esphereal.bair.funloot.R

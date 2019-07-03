@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot.NEIGHBORHOOD
+package com.esphereal.bair.neighborhood.NEIGHBORHOOD
 
 import android.content.Intent
 import android.os.Bundle
@@ -15,7 +15,7 @@ class NibbaMainActivity : AppCompatActivity(),View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.nibba_main_activity)
-        nibba_button.setOnClickListener(object : View.OnClickListener{
+        nibba_button_send.setOnClickListener(object : View.OnClickListener{
             override fun onClick (v:View?){
                 val intent = Intent (this@NibbaMainActivity,NibbaNewsActivity::class.java)
                 startActivity(intent)

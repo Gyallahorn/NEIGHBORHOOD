@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot.jsoup;
+package com.esphereal.bair.neighborhood.jsoup;
 
         import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot
+package com.esphereal.bair.neighborhood
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

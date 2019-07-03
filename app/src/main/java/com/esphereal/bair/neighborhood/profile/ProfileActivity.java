@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot.profile;
+package com.esphereal.bair.neighborhood.profile;
 
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -14,8 +14,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.esphereal.bair.funloot.R;
-import com.esphereal.bair.funloot.retrofit.FunlootUser;
+import com.esphereal.bair.neighborhood.retrofit.FunlootUser;
 import com.esphereal.bair.funloot.retrofit.RetrofitSingleton;
+import com.esphereal.bair.neighborhood.retrofit.FunlootUser;
+import com.esphereal.bair.neighborhood.retrofit.RetrofitSingleton;
 
 import retrofit2.Call;
 import retrofit2.Callback;

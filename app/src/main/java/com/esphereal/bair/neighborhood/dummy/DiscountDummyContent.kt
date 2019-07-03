@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot.dummy
+package com.esphereal.bair.neighborhood.dummy
 
 import com.esphereal.bair.funloot.R
 

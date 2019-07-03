@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot
+package com.esphereal.bair.neighborhood
 
 import android.app.ProgressDialog
 import android.content.Context
@@ -15,8 +15,8 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 
-import com.esphereal.bair.funloot.profile.ProfileSingletone
-import com.esphereal.bair.funloot.retrofit.RetrofitSingleton
+import com.esphereal.bair.neighborhood.profile.ProfileSingletone
+import com.esphereal.bair.neighborhood.retrofit.RetrofitSingleton
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -71,9 +71,9 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(com.esphereal.bair.funloot.R.layout.activity_login)
 
-        mGoogleButton = findViewById(R.id.google_button_login)
+        mGoogleButton = findViewById(com.esphereal.bair.funloot.R.id.google_button_login)
         mGoogleButton!!.setOnClickListener { signIn() }
         /*   mSignOut = findViewById(R.id.button_sign_out);
         mSignOut.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +84,7 @@ class LoginActivity : AppCompatActivity() {
         });*/
         // Configure Google Sign In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestIdToken(getString(com.esphereal.bair.funloot.R.string.default_web_client_id))
                 .requestEmail()
                 .build()
 
@@ -94,13 +94,13 @@ class LoginActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
 
-        mStartVerifyButton = findViewById(R.id.start_verify_button_login)
-        mResendVerifyButton = findViewById(R.id.resend_verify_button)
-        mCodeVerifyButton = findViewById(R.id.code_verify_button)
-        mCodeEdit = findViewById(R.id.code_edit_login)
-        mPhoneNumberEdit = findViewById(R.id.phone_edit_login)
-        mProgressBar = findViewById(R.id.progress_bar_login)
-        mContentLoginLayout = findViewById(R.id.content_login)
+        mStartVerifyButton = findViewById(com.esphereal.bair.funloot.R.id.start_verify_button_login)
+        mResendVerifyButton = findViewById(com.esphereal.bair.funloot.R.id.resend_verify_button)
+        mCodeVerifyButton = findViewById(com.esphereal.bair.funloot.R.id.code_verify_button)
+        mCodeEdit = findViewById(com.esphereal.bair.funloot.R.id.code_edit_login)
+        mPhoneNumberEdit = findViewById(com.esphereal.bair.funloot.R.id.phone_edit_login)
+        mProgressBar = findViewById(com.esphereal.bair.funloot.R.id.progress_bar_login)
+        mContentLoginLayout = findViewById(com.esphereal.bair.funloot.R.id.content_login)
 
         /*   mCodeVerifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,17 +133,17 @@ class LoginActivity : AppCompatActivity() {
 
         mCallBack = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {
-                Log.d(TAG, "onVerificationCompleted!")
+                Log.d(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "onVerificationCompleted!")
             }
 
             override fun onVerificationFailed(e: FirebaseException) {
-                Log.d(TAG, "FUCK! nVerificationStateChangedCallbacks")
-                changeUi(uiState.STATE_BEGIN)
+                Log.d(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "FUCK! nVerificationStateChangedCallbacks")
+                changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_BEGIN)
                 val toast = Toast.makeText(applicationContext,
                         "Ошибка", Toast.LENGTH_LONG)
                 toast.show()
                 //+79991737803
-                Log.d(TAG, e.message)
+                Log.d(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, e.message)
             }
 
             override fun onCodeSent(verificationId: String?,
@@ -151,23 +151,23 @@ class LoginActivity : AppCompatActivity() {
                 // The SMS verification code has been sent to the provided phone number, we
                 // now need to ask the user to enter the code and then construct a credential
                 // by combining the code with a verification ID.
-                Log.d(TAG, "onCodeSent:" + verificationId!!)
+                Log.d(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "onCodeSent:" + verificationId!!)
 
                 // Save verification ID and resending token so we can use them later
                 mVerificationId = verificationId
                 mResendToken = token
-                changeUi(uiState.STATE_CODESEND)
+                changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_CODESEND)
 
             }
         }
 
 
-        changeUi(uiState.STATE_BEGIN)
+        changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_BEGIN)
     }
 
-    private fun changeUi(state: uiState) {
+    private fun changeUi(state: com.esphereal.bair.neighborhood.LoginActivity.uiState) {
         when (state) {
-            LoginActivity.uiState.STATE_BEGIN -> {
+            com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_BEGIN -> {
                 mCodeVerifyButton!!.visibility = View.GONE
                 mResendVerifyButton!!.visibility = View.GONE
                 mStartVerifyButton!!.visibility = View.VISIBLE
@@ -176,7 +176,7 @@ class LoginActivity : AppCompatActivity() {
                 mProgressBar!!.visibility = View.GONE
                 mContentLoginLayout!!.visibility = View.VISIBLE
             }
-            LoginActivity.uiState.STATE_STARTED -> {
+            com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_STARTED -> {
                 mContentLoginLayout!!.visibility = View.GONE
                 mPhoneNumberEdit!!.visibility = View.GONE
                 mCodeEdit!!.visibility = View.GONE
@@ -185,7 +185,7 @@ class LoginActivity : AppCompatActivity() {
                 mStartVerifyButton!!.visibility = View.GONE
                 mProgressBar!!.visibility = View.VISIBLE
             }
-            LoginActivity.uiState.STATE_CODESEND -> {
+            com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_CODESEND -> {
                 mContentLoginLayout!!.visibility = View.VISIBLE
                 //mCodeVerifyButton.setVisibility(View.VISIBLE);
                 //mResendVerifyButton.setVisibility(View.VISIBLE);
@@ -194,9 +194,9 @@ class LoginActivity : AppCompatActivity() {
                 mCodeEdit!!.visibility = View.VISIBLE
                 mProgressBar!!.visibility = View.GONE
             }
-            LoginActivity.uiState.STATE_FAILURE -> {
+            com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_FAILURE -> {
             }
-            LoginActivity.uiState.STATE_CODEPRESSED -> {
+            com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_CODEPRESSED -> {
                 mPhoneNumberEdit!!.visibility = View.GONE
                 mCodeEdit!!.visibility = View.GONE
                 mCodeVerifyButton!!.visibility = View.GONE
@@ -216,20 +216,20 @@ class LoginActivity : AppCompatActivity() {
         signInWithPhoneAuthCredential(credential)
 
 
-        changeUi(uiState.STATE_CODEPRESSED)
+        changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_CODEPRESSED)
 
 
     }
 
     private fun onResendVerify() {
-        changeUi(uiState.STATE_BEGIN)
+        changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_BEGIN)
     }
 
 
     private fun onStartVerify() {
         val imm = mPhoneNumberEdit!!.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(mPhoneNumberEdit!!.windowToken, 0)
-        changeUi(uiState.STATE_STARTED)
+        changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_STARTED)
         val number = mPhoneNumberEdit!!.text.toString()
         if (mResendToken == null)
             PhoneAuthProvider.getInstance().verifyPhoneNumber(number, 60, TimeUnit.SECONDS, this, mCallBack!!)
@@ -243,14 +243,14 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
 
-                        Log.d(TAG, "signInWithCredential:success")
+                        Log.d(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "signInWithCredential:success")
                         loginOnBackEnd()
                         //FirebaseUser user = task.getResult().getUser();
 
                     } else {
                         // Sign in failed, display a message and update the UI
-                        changeUi(uiState.STATE_BEGIN)
-                        Log.w(TAG, "signInWithCredential:failure", task.exception)
+                        changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_BEGIN)
+                        Log.w(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "signInWithCredential:failure", task.exception)
                         val toast = Toast.makeText(applicationContext,
                                 "Не удалось подключиться через телефон", Toast.LENGTH_LONG)
                         toast.show()
@@ -266,7 +266,7 @@ class LoginActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
+        if (requestCode == com.esphereal.bair.neighborhood.LoginActivity.Companion.RC_SIGN_IN) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             try {
                 // Google Sign In was successful, authenticate with Firebase
@@ -274,18 +274,18 @@ class LoginActivity : AppCompatActivity() {
                 firebaseAuthWithGoogle(account!!)
             } catch (e: ApiException) {
                 // Google Sign In failed, update UI appropriately
-                Log.w(TAG, "Google sign in failed", e)
+                Log.w(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "Google sign in failed", e)
                 val toast = Toast.makeText(applicationContext,
                         "Ошибка", Toast.LENGTH_LONG)
                 toast.show()
-                changeUi(uiState.STATE_BEGIN)
+                changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_BEGIN)
             }
 
         }
     }
 
     private fun firebaseAuthWithGoogle(acct: GoogleSignInAccount) {
-        Log.d(TAG, "firebaseAuthWithGoogle:" + acct.id!!)
+        Log.d(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "firebaseAuthWithGoogle:" + acct.id!!)
         showProgressDialog()
 
         val credential = GoogleAuthProvider.getCredential(acct.idToken, null)
@@ -293,14 +293,14 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
-                        Log.d(TAG, "signInWithCredential:success")
+                        Log.d(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "signInWithCredential:success")
                         loginOnBackEnd()
 
 
                     } else {
                         // If sign in fails, display a message to the user.
-                        Log.w(TAG, "signInWithCredential:failure", task.exception)
-                        changeUi(uiState.STATE_BEGIN)
+                        Log.w(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "signInWithCredential:failure", task.exception)
+                        changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_BEGIN)
                         val toast = Toast.makeText(applicationContext,
                                 "не удалось подключиться к google auth", Toast.LENGTH_LONG)
                         toast.show()
@@ -314,9 +314,9 @@ class LoginActivity : AppCompatActivity() {
         val callback = object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
 
-                Log.d(TAG, "get response from backend code " + response.code())
+                Log.d(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "get response from backend code " + response.code())
                 if (!response.isSuccessful) {
-                    changeUi(uiState.STATE_BEGIN)
+                    changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_BEGIN)
                     val toast = Toast.makeText(applicationContext,
                             "Серверная ошибка", Toast.LENGTH_LONG)
                     toast.show()
@@ -330,11 +330,11 @@ class LoginActivity : AppCompatActivity() {
 
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
-                changeUi(uiState.STATE_BEGIN)
+                changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_BEGIN)
                 val toast = Toast.makeText(applicationContext,
                         "Ошибка соединения", Toast.LENGTH_LONG)
                 toast.show()
-                Log.d(TAG, t.message)
+                Log.d(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, t.message)
             }
         }
         val user = mAuth!!.currentUser
@@ -349,19 +349,19 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun goToMainActivity() {
-        Log.d(TAG, "goToMainActivity")
-        ProfileSingletone.getInstance().GetUser(null)
-        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+        Log.d(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "goToMainActivity")
+        com.esphereal.bair.neighborhood.profile.ProfileSingletone.getInstance().GetUser(null)
+        val intent = Intent(this@LoginActivity, com.esphereal.bair.neighborhood.MainActivity::class.java)
         startActivity(intent)
         finish()
     }
 
 
     private fun signIn() {
-        Log.d(TAG, "on click google signin")
-        changeUi(uiState.STATE_CODEPRESSED)
+        Log.d(com.esphereal.bair.neighborhood.LoginActivity.Companion.TAG, "on click google signin")
+        changeUi(com.esphereal.bair.neighborhood.LoginActivity.uiState.STATE_CODEPRESSED)
         val signInIntent = mGoogleSignInClient!!.signInIntent
-        startActivityForResult(signInIntent, RC_SIGN_IN)
+        startActivityForResult(signInIntent, com.esphereal.bair.neighborhood.LoginActivity.Companion.RC_SIGN_IN)
     }
 
     override fun onStart() {

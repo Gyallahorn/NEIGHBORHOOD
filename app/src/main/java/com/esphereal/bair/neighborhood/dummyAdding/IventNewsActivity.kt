@@ -1,4 +1,4 @@
-package com.esphereal.bair.funloot.dummyAdding
+package com.esphereal.bair.neighborhood.dummyAdding
 
 import android.content.Context
 import android.os.Bundle
