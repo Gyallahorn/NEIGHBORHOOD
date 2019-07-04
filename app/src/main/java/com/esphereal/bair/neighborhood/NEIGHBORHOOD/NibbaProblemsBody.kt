@@ -15,11 +15,20 @@ class NibbaProblemsBody {
     @SerializedName("body")
     @Expose
     var problems_body: String? = null
+    @SerializedName("createDate")
+    @Expose
+    var createDate: String? = null
+    @SerializedName("userName")
+    @Expose
+    var userName: String? = null
 
     override fun toString(): String {
         return ToStringBuilder (this)
                 .append("news_title", problems_title)
-                .append("problems_body", problems_body).toString()
+                .append("problems_body", problems_body)
+                .append("createDate",createDate)
+                .append("userName",userName)
+                .toString()
     }
 }
 
